@@ -1,0 +1,66 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.home-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.products-section {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  scroll-behavior: smooth;
+}
+
+/* LOADER */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/* FAILURE */
+.failure-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.failure-img {
+  width: 260px;
+}
+
+.failure-heading {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.retry-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+}
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+  .home-layout {
+    flex-direction: column;
+  }
+
+  .products-section {
+    padding: 8px;
+    padding-bottom: 70px;
+  }
+}

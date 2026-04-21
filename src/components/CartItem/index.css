@@ -1,0 +1,141 @@
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* LEFT */
+.cart-item-left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.cart-img {
+  width: 85px;
+  height: 85px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cart-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.weight {
+  font-size: 12px;
+  color: #888;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* RIGHT */
+.cart-item-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* QUANTITY */
+.cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid green;
+  border-radius: 6px;
+  padding: 2px 6px;
+  height: 30px;
+}
+
+/* ICON BUTTONS */
+.qty-btn {
+  border: none;
+  background: none;
+  padding: 2px;
+  margin: 0;
+  color: green;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:focus,
+.qty-btn:active {
+  outline: none;
+  transform: none;
+}
+
+/* COUNT */
+.count {
+  min-width: 18px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* DELETE */
+.delete-btn {
+  border: none;
+  background: none;
+  color: red;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn:hover {
+  background-color: #f3f3f3;
+  border-radius: 4px;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+  .cart-img {
+    width: 95px;
+    height: 95px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cart-item-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cart-img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .cart-controls {
+    height: 28px;
+  }
+}

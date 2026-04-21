@@ -1,0 +1,86 @@
+.topbar {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  overflow-x: auto;
+  position: sticky;
+  top: 0;
+  z-index: high;
+}
+
+.topbar-list {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+.topbar-item {
+  flex-shrink: 0;
+}
+
+.topbar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 65px;
+  border: none;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.icon {
+  font-size: 20px;
+  color: #555;
+}
+
+.label {
+  font-size: 10px;
+  margin: 3px 0 0 0;
+  text-align: center;
+  color: #555;
+}
+
+/* ACTIVE STATE */
+.active-top .topbar-btn {
+  background-color: green;
+}
+
+.active-top .icon {
+  color: #ffffff;
+}
+
+.active-top .label {
+  color: #ffffff;
+}
+
+/* SCROLL HIDE */
+.topbar::-webkit-scrollbar {
+  display: none;
+}
+
+.topbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* RESPONSIVE */
+
+/* Desktop → hide */
+@media screen and (min-width: 768px) {
+  .topbar {
+    display: none;
+  }
+}
+
+/* Mobile → show */
+@media screen and (max-width: 767px) {
+  .topbar {
+    display: block;
+  }
+}

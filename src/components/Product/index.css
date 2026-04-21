@@ -1,0 +1,181 @@
+.product-card {
+  list-style-type: none;
+  min-width: 180px;
+  max-width: 200px;
+  height: 230px;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.04);
+}
+
+.product-image {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  align-self: center;
+  border-radius: 6px;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 6px 0;
+  color: #222;
+  text-align: center;
+  min-height: 32px;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.product-weight {
+  font-size: 12px;
+  color: #7e858e;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  border: 1px solid green;
+  background: none;
+  color: green;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* QUANTITY CONTAINER */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid green;
+  border-radius: 6px;
+  padding: 2px 6px;
+  gap: 4px;
+  height: 28px;
+}
+
+/* FIX BUTTON SIZE ISSUE */
+.qty-btn {
+  border: none;
+  background: none;
+  color: green;
+  cursor: pointer;
+  padding: 2px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ICON SIZE CONTROL */
+.qty-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* REMOVE SIZE JUMP */
+.qty-btn:focus,
+.qty-btn:active {
+  outline: none;
+  transform: none;
+}
+
+/* QUANTITY TEXT */
+.quantity {
+  margin: 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* HOVER EFFECT */
+.qty-btn:hover {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+/* LARGE DEVICES */
+@media screen and (min-width: 1200px) {
+  .product-card {
+    min-width: 200px;
+    max-width: 220px;
+    height: 250px;
+  }
+
+  .product-name {
+    font-size: 15px;
+  }
+
+  .product-price {
+    font-size: 15px;
+  }
+
+  .quantity-container {
+    height: 30px;
+  }
+
+  .qty-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+  .product-card {
+    min-width: 150px;
+    max-width: 160px;
+    height: 210px;
+    padding: 10px;
+  }
+
+  .product-image {
+    width: 95px;
+    height: 70px;
+  }
+
+  .product-name {
+    font-size: 13px;
+  }
+
+  .product-price {
+    font-size: 13px;
+  }
+
+  .quantity-container {
+    height: 26px;
+    padding: 2px 5px;
+  }
+
+  .qty-btn svg {
+    width: 12px;
+    height: 12px;
+  }
+}
